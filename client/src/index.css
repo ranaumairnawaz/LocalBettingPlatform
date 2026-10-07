@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00f2fe;
+  --color-secondary: #090a0f;
+  --color-accent: #ff007f;
+  
+  --color-bg-dark: #090a0f;
+  --color-glass: rgba(18, 22, 35, 0.6);
+  --color-neon-cyan: #00f2fe;
+  --color-neon-pink: #ff007f;
+  --color-neon-green: #39ff14;
+  --color-neon-gold: #ffb700;
+  
+  --shadow-neon-cyan: 0 0 15px rgba(0, 242, 254, 0.35);
+  --shadow-neon-pink: 0 0 15px rgba(255, 0, 127, 0.35);
+  --shadow-neon-green: 0 0 15px rgba(57, 255, 20, 0.35);
+  --shadow-neon-gold: 0 0 15px rgba(255, 183, 0, 0.35);
+}
+
+body {
+  @apply bg-bg-dark text-slate-100 font-sans overflow-x-hidden selection:bg-neon-pink selection:text-white;
+}
+
+/* Custom Scrollbar for premium e-sports look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-bg-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-neon-cyan/50 transition-colors;
+}
+
+/* Micro-animations and utility glow panels */
+.glow-card-cyan {
+  @apply bg-[#121623]/60 border border-white/10 hover:border-neon-cyan/40 shadow-sm hover:shadow-[0_0_15px_rgba(0,242,254,0.25)] transition-all duration-300 backdrop-blur-md rounded-2xl;
+}
+
+.glow-card-pink {
+  @apply bg-[#121623]/60 border border-white/10 hover:border-neon-pink/40 shadow-sm hover:shadow-[0_0_15px_rgba(255,0,127,0.25)] transition-all duration-300 backdrop-blur-md rounded-2xl;
+}
+
+.glow-card-gold {
+  @apply bg-[#121623]/60 border border-white/10 hover:border-neon-gold/40 shadow-sm hover:shadow-[0_0_15px_rgba(255,183,0,0.25)] transition-all duration-300 backdrop-blur-md rounded-2xl;
+}
+
+.glow-card-green {
+  @apply bg-[#121623]/60 border border-white/10 hover:border-neon-green/40 shadow-sm hover:shadow-[0_0_15px_rgba(57,255,20,0.25)] transition-all duration-300 backdrop-blur-md rounded-2xl;
+}
